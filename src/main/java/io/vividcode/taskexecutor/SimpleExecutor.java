@@ -34,7 +34,7 @@ public class SimpleExecutor {
     public void run() {
       try {
         Thread.sleep(ThreadLocalRandom.current().nextInt(2000));
-        System.out.println("Run #" + count);
+        System.out.println(String.format("[%s] Run %d", Thread.currentThread().getName(), count));
       } catch (InterruptedException e) {
         e.printStackTrace();
       } finally {
